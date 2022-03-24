@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace prjJogoForca
 
 {
@@ -22,13 +24,18 @@ namespace prjJogoForca
         };
         Forca jogo;
         Label[] Letras;
+
         int Erro = 0;
+        SoundPlayer som;
 
         private void Form1_Load(object sender, EventArgs e)
         {
             jogo = new Forca(lista);
             jogo.Sortear();
             DesenharPalavra(jogo.DevolvePalavra());
+            som = new SoundPlayer();
+            som.SoundLocation = Environment.CurrentDirectory + "\\fundo.wav";
+            som.PlayLooping();
         }
         private void DesenharPalavra(string p)
         {
@@ -94,10 +101,16 @@ namespace prjJogoForca
             }
             if (Erro == 6)
             {
+                timer1.Stop();
                 Derrota();
+                lbCronometro.Text = "120";
+                timer1.Start();
             }
 
+          
             Vitoria();
+            
+
                 
             
         }
@@ -114,6 +127,10 @@ namespace prjJogoForca
             if(p.Equals(tmp))
             {
                 MessageBox.Show("Parabéns, Você venceu!!!");
+
+                timer1.Stop();               
+                lbCronometro.Text = "120";
+                timer1.Start();
                 NovoJogo();
             }
         }
@@ -140,6 +157,27 @@ namespace prjJogoForca
             string arquivo = Environment.CurrentDirectory + 
                 "\\imagens\\forca" + Erro + ".png";
             pbBoneco.Image = Image.FromFile(arquivo);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int seg = Int16.Parse(lbCronometro.Text);
+            seg--;
+            lbCronometro.Text = seg.ToString();
+            if(seg <= 15)
+            {
+                Console.Beep();
+                lbCronometro.ForeColor = Color.Red;
+            }
+            if(seg <= 0)
+            {
+                timer1.Stop();
+                Derrota();
+                lbCronometro.Text = "120";
+                timer1.Start();
+                lbCronometro.ForeColor = Color.White;
+            }
+
         }
 
         

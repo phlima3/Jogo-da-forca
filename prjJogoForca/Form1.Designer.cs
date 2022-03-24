@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnLetra = new System.Windows.Forms.Panel();
             this.btnJogar = new System.Windows.Forms.Button();
@@ -41,6 +42,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbLetras = new System.Windows.Forms.Label();
+            this.lbCronometro = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnLetra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbForca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBoneco)).BeginInit();
@@ -183,6 +186,23 @@
             this.lbLetras.TabIndex = 8;
             this.lbLetras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lbCronometro
+            // 
+            this.lbCronometro.BackColor = System.Drawing.Color.Transparent;
+            this.lbCronometro.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCronometro.Location = new System.Drawing.Point(330, 261);
+            this.lbCronometro.Name = "lbCronometro";
+            this.lbCronometro.Size = new System.Drawing.Size(160, 54);
+            this.lbCronometro.TabIndex = 9;
+            this.lbCronometro.Text = "120";
+            this.lbCronometro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
@@ -190,6 +210,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(934, 745);
+            this.Controls.Add(this.lbCronometro);
             this.Controls.Add(this.lbLetras);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -237,6 +258,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lbLetras;
+        private System.Windows.Forms.Label lbCronometro;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

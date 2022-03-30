@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -18,10 +19,10 @@ namespace prjJogoForca
         {
             InitializeComponent();
         }
-        List<string> lista = new List<string>()
-        {
-             "ABAJUR","ABRIDOR","BACIA","BALANCA","CABIDE","CADEADO","DADO","DARDO","ESCADA","ENXADA","FACA","FICHA","GAIOLA","GAITA","HARPA","HASTE","IMPRESSORA","ISCA","JALECO","JOIA","LAMINA","LAMPADA","MACHADO","MARTELO","NOTEBOOK","NAVALHA","OCULOS","OMBREIRA","PA","PANELA","QUADRICICLO","QUADRO","RADIO","RALADOR","SACO","SALEIRO","TABUA","TABULEIRO","URNA","UNIFORME","VARA","VARAL","WEBCAM","ZIPER"
-        };
+
+        List<string> lista = new List<string>();
+        List<string> dicas = new List<string>();
+        
         Forca jogo;
         Label[] Letras;
 
@@ -30,12 +31,21 @@ namespace prjJogoForca
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            CarregarLista();
             jogo = new Forca(lista);
             jogo.Sortear();
             DesenharPalavra(jogo.DevolvePalavra());
             som = new SoundPlayer();
             som.SoundLocation = Environment.CurrentDirectory + "\\fundo.wav";
             som.PlayLooping();
+        }
+
+        private void CarregarLista()
+        {
+            string file = Environment.CurrentDirectory + "\\lista.txt";
+            StreamReader st = new
+
+            StreamReader(file,Encoding.UTF8);
         }
         private void DesenharPalavra(string p)
         {

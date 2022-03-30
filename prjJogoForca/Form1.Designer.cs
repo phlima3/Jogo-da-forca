@@ -44,6 +44,7 @@
             this.lbLetras = new System.Windows.Forms.Label();
             this.lbCronometro = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbDicas = new System.Windows.Forms.Label();
             this.pnLetra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbForca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBoneco)).BeginInit();
@@ -135,7 +136,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(720, 344);
+            this.pictureBox1.Location = new System.Drawing.Point(585, 424);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(134, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +147,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(568, 261);
+            this.pictureBox2.Location = new System.Drawing.Point(537, 344);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(133, 118);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +169,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(579, 416);
+            this.pictureBox4.Location = new System.Drawing.Point(496, 460);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(73, 70);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +191,7 @@
             // 
             this.lbCronometro.BackColor = System.Drawing.Color.Transparent;
             this.lbCronometro.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCronometro.Location = new System.Drawing.Point(330, 261);
+            this.lbCronometro.Location = new System.Drawing.Point(-3, 539);
             this.lbCronometro.Name = "lbCronometro";
             this.lbCronometro.Size = new System.Drawing.Size(160, 54);
             this.lbCronometro.TabIndex = 9;
@@ -203,6 +204,18 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lbDicas
+            // 
+            this.lbDicas.BackColor = System.Drawing.Color.Transparent;
+            this.lbDicas.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDicas.ForeColor = System.Drawing.Color.Gold;
+            this.lbDicas.Location = new System.Drawing.Point(5, 615);
+            this.lbDicas.Name = "lbDicas";
+            this.lbDicas.Size = new System.Drawing.Size(943, 56);
+            this.lbDicas.TabIndex = 10;
+            this.lbDicas.Text = "Dica";
+            this.lbDicas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
@@ -210,6 +223,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(934, 745);
+            this.Controls.Add(this.lbDicas);
             this.Controls.Add(this.lbCronometro);
             this.Controls.Add(this.lbLetras);
             this.Controls.Add(this.pictureBox4);
@@ -260,6 +274,7 @@
         private System.Windows.Forms.Label lbLetras;
         private System.Windows.Forms.Label lbCronometro;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbDicas;
     }
 }
 

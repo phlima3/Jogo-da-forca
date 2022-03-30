@@ -38,6 +38,9 @@ namespace prjJogoForca
             som = new SoundPlayer();
             som.SoundLocation = Environment.CurrentDirectory + "\\fundo.wav";
             som.PlayLooping();
+            lbDicas.Text = "DICA: " +
+                dicas[jogo.Pos];
+
         }
 
         private void CarregarLista()
@@ -46,6 +49,17 @@ namespace prjJogoForca
             StreamReader st = new
 
             StreamReader(file,Encoding.UTF8);
+            int qtd = File.ReadAllLines(file)
+                    .Count();
+            for (int i = 0; i < qtd; i++)
+            {
+                string linha = st.ReadLine();
+                string[] campo = linha.Split(',');
+                lista.Add(campo[0]);
+                dicas.Add(campo[1]);
+
+            }
+            st.Close();
         }
         private void DesenharPalavra(string p)
         {
@@ -159,6 +173,8 @@ namespace prjJogoForca
             jogo.Sortear();
             DesenharPalavra(jogo.DevolvePalavra());
             lbLetras.Text = "";
+            lbDicas.Text = "DICA: " +
+                dicas[jogo.Pos];
 
         }
 

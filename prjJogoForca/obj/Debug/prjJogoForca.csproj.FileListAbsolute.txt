@@ -25,3 +25,6 @@ C:\Users\Aluno\Desktop\Jogo-da-forca-main\prjJogoForca\obj\Debug\prjJogoForca.Fo
 C:\Users\Aluno\Desktop\Jogo-da-forca-main\prjJogoForca\obj\Debug\prjJogoForca.Properties.Resources.resources
 C:\Users\Aluno\Desktop\Jogo-da-forca-main\prjJogoForca\obj\Debug\prjJogoForca.csproj.GenerateResource.Cache
 C:\Users\Aluno\Desktop\Jogo-da-forca-main\prjJogoForca\obj\Debug\prjJogoForca.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\GitHub\Jogo-da-forca\prjJogoForca\bin\Debug\prjJogoForca.exe.config
+C:\Users\Aluno\Documents\GitHub\Jogo-da-forca\prjJogoForca\obj\Debug\prjJogoForca.exe
+C:\Users\Aluno\Documents\GitHub\Jogo-da-forca\prjJogoForca\obj\Debug\prjJogoForca.pdb

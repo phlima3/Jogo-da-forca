@@ -206,6 +206,27 @@ namespace prjJogoForca
 
         }
 
+        private void btnNovoJogo_Click(object sender, EventArgs e)
+        {
+            NovoJogo();
+            lbCronometro.Text = "120";
+
+        }
+
+        private void txtLetra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if(e.KeyChar == Convert.ToChar(
+                Keys.Enter))
+            {
+                btnJogar_Click(sender, e);
+
+            }
+        }
+
         
     }
 }

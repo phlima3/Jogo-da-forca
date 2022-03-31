@@ -45,6 +45,7 @@
             this.lbCronometro = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbDicas = new System.Windows.Forms.Label();
+            this.btnNovoJogo = new System.Windows.Forms.Button();
             this.pnLetra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbForca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBoneco)).BeginInit();
@@ -91,6 +92,7 @@
             this.txtLetra.TabIndex = 1;
             this.txtLetra.Text = "A";
             this.txtLetra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLetra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetra_KeyPress);
             // 
             // label1
             // 
@@ -216,6 +218,23 @@
             this.lbDicas.Text = "Dica";
             this.lbDicas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnNovoJogo
+            // 
+            this.btnNovoJogo.BackColor = System.Drawing.Color.DimGray;
+            this.btnNovoJogo.FlatAppearance.BorderSize = 0;
+            this.btnNovoJogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovoJogo.ForeColor = System.Drawing.Color.Gold;
+            this.btnNovoJogo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoJogo.Image")));
+            this.btnNovoJogo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNovoJogo.Location = new System.Drawing.Point(725, 396);
+            this.btnNovoJogo.Name = "btnNovoJogo";
+            this.btnNovoJogo.Size = new System.Drawing.Size(182, 101);
+            this.btnNovoJogo.TabIndex = 11;
+            this.btnNovoJogo.Text = "NOVO JOGO";
+            this.btnNovoJogo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNovoJogo.UseVisualStyleBackColor = false;
+            this.btnNovoJogo.Click += new System.EventHandler(this.btnNovoJogo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
@@ -223,6 +242,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(934, 745);
+            this.Controls.Add(this.btnNovoJogo);
             this.Controls.Add(this.lbDicas);
             this.Controls.Add(this.lbCronometro);
             this.Controls.Add(this.lbLetras);
@@ -275,6 +295,7 @@
         private System.Windows.Forms.Label lbCronometro;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbDicas;
+        private System.Windows.Forms.Button btnNovoJogo;
     }
 }
 
